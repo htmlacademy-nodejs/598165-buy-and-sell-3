@@ -4,7 +4,7 @@ const express = require(`express`);
 const offersRouter = require(`./routes/offers`);
 const myRouter = require(`./routes/my`);
 
-const DEFAULT_PORT = 8000;
+const DEFAULT_PORT = 8001;
 
 const app = express();
 app.use(`/css`, express.static(`./markup/css`));
