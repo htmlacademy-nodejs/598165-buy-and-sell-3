@@ -1,0 +1,73 @@
+
+GET http://localhost:3000/api/categories/ HTTP/1.1
+###
+
+GET http://localhost:3000/api/offers/ HTTP/1.1
+###
+
+GET http://localhost:3000/api/offers/notanoffer HTTP/1.1
+###
+
+GET http://localhost:3000/api/offers/w3eOXEY9ayTzgjeXpZHfd HTTP/1.1
+###
+
+POST http://localhost:3000/api/offers/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "_Kpp20ghEHx9gWar0_97N",
+    "type": "sale",
+    "title": "Продам новую приставку Sony Playstation 5.",
+    "description": "Кому нужен этот новый телефон, если тут такое... Использовалось один раз, на свою свадьбу, после свадьбы сдавалось в химчистку! В ПОДАРОК ПРАЗДНИЧНЫЙ БАНТ, КОВРИК, ИНДИВИДУАЛЬНЫЕ НОМЕРА Если найдёте дешевле — сброшу цену.",
+    "sum": 16765,
+    "picture": "item10.jpg",
+    "category": [
+      "Посуда"
+    ]
+  }
+###
+
+PUT http://localhost:3000/api/offers/w3eOXEY9ayTzgjeXpZHfd HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": "w3eOXEY9ayTzgjeXpZHfd",
+  "type": "sale",
+  "title": "Куплю породистого кота. 🚀 🔥",
+  "description": "Это настоящая находка для коллекционера! Мой дед не мог её сломать. Не пытайтесь торговаться. Цену вещам я знаю.",
+  "sum": 75086,
+  "picture": "item12.jpg",
+  "category": [
+    "Журналы",
+    "Посуда"
+  ],
+  "comments": [
+    {
+      "id": "PqJ5GkuMoygVjAsgh4mPz",
+      "text": "Неплохо, но дорого. А где блок питания?"
+    },
+    {
+      "id": "d0BoJt57HeXNtdnowuxwp",
+      "text": "С чем связана продажа? Почему так дешёво? Продаю в связи с переездом. Отрываю от сердца."
+    }
+  ]
+}
+###
+
+DELETE http://localhost:3000/api/offers/w3eOXEY9ayTzgjeXpZHfd HTTP/1.1
+###
+
+GET http://localhost:3000/api/offers/s1rFxAcuQ833iiLQ_XJH1/comments HTTP/1.1
+###
+
+POST http://localhost:3000/api/offers/s1rFxAcuQ833iiLQ_XJH1/comments HTTP/1.1
+Content-Type: application/json
+
+{"text" : "💚"}
+###
+
+DELETE http://localhost:3000/api/offers/w3eOXEY9ayTzgjeXpZHfd/comments/JP1ryNMgRZJ75oSnsK8L5 HTTP/1.1
+###
+
+GET http://localhost:3000/api/search/?q=Огонёк HTTP/1.1
+###
