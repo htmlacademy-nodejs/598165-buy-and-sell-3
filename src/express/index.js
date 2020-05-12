@@ -7,6 +7,7 @@ const myRouter = require(`./routes/my`);
 const DEFAULT_PORT = 8001;
 
 const app = express();
+
 app.use(`/css`, express.static(`./markup/css`));
 app.use(`/img`, express.static(`./markup/img`));
 app.use(`/js`, express.static(`./markup/js`));
